@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------------------------------------------
+in this project ->
+there are 2 repositories
+1.product
+2.User
+->both are implemented with jpa-repo which inherits every useful CRUD method that
+  works efficiently with the database
+
+there are 2 models
+1.user
+2.product
+
+the models are the structures of how we wish to keep the data in your database
+
+
+
+there are 2 controllers
+1.product
+2.user
+
+product controllers contains->
+    /api/getAllProducts -> to get all the products in our database in json format
+    /api/getProductById/{id} -> to get the element in json frmt through id
+    /api/admin/addProduct -> adding a new element to the databse through json format
+    /api/admin/updateProduct/{id} -> to update the element by json format
+    /api/admin/deleteProductById/{id} -> to delete the element by id
+
+user contoller contains->
+    /api/user/register -> to register the user in the db
+    /api/user/addItemToCartById/{userId}/{productId} -> to add an item through id for a user by his id
+
+the database is h2 database which is in-memory database where the data in the database
+availble only when our machine is in ON-state,it will delete the entire data when it is in OFF state
+
+
+
+END-POINTS->
+    GET
+    http://localhost:9090//api/getAllProducts  -> to get all products
+
+    GET
+    http://localhost:9090/api/getProductById/{id} -> to get product by id
+
+    POST
+    http://localhost:9090/api/admin/addProduct  -> to add an element
+    ex-
+    {
+       "name":"samsung galaxy mobile",
+       "price":35000,
+       "type":"smart-phone"
+       "gender":"unisexual"
+    }
+
+    POST
+    http://localhost:9090/api/admin/updateProduct/{id} -> to update the element by json format
+    ex-
+    {
+       "name":"samsung galaxy mobile",
+       "price":30000,
+       "type":"smart-phone"
+       "gender":"unisexual"
+    }
+
+    DELETE
+    http://localhost:9090/api/admin/deleteProductById/{id} -> to delete the element by id
+
+    DELETE
+    http://localhost:9090/api/admin/deleteAllProducts -> to delete all products in one shot
+
+    POST
+    http://localhost:9090/api/user/register -> to create a user
+    ex->
+    {
+        "username":"hemanth",
+        "password":"1234"
+    }
+
+    POST
+     http://localhost:9090/api/user/addItemToCartById/{userId}/{productId}
+     it will update the users cart by adding another object of product
+
+     POST
+     http://localhost:9090/api/user/Orderitem/{userId}/{productId}
+     it will add the items to orders list of the respective user.
+
+
+
+-------------------------------------------------------X-------------------------------------------------------------------
