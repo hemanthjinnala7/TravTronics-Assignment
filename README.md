@@ -173,7 +173,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 - **Author**: Hemanth Jinnala
-- **Email**: hemanthjinnala777@gmail.com(mailto:your.email@example.com)
+- **Email**: hemanthjinnala777@gmail.com
 - **GitHub**: [hemanthjinnala7](https://github.com/hemanthjinnala7)
 
 ---
